@@ -1,0 +1,16 @@
+--- 
+title: Puzzles 
+---
+
+<h1>Abhishek Kona's puzzle site</h1>
+I am <a href="http://sheki.in/me">Abhishek kona.</a>
+I like solving algorithmic puzzles. 
+This is my collection of puzzles. I have tried to collect the puzzles I liked, and tried to get the name of each. A name for a puzzle helps us discuss is a step forward.
+<ul>
+    <%  @items.select { |i| i.identifier.start_with?('/puzzle/') }.each do |puz| %>
+   <li>
+        <a href="<%=puz.path%>">
+            <%=puz[:name]%></a> 
+    </li>
+    <% end %>
+</ul>

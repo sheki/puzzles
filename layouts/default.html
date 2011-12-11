@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Puzzles - <%= @item[:name] %></title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+    <meta name="generator" content="nanoc 3.2.3">
+  </head>
+  <body>
+      <div id="main">
+       <% if @item[:name] %>
+	<div class="puz_head">
+ 	<h1><%= @item[:name] %></h1></div>
+    <% end %>
+ 	<%= yield %>
+    </div>
+    <div id="sidebar">
+    <h2>Links</h2>
+    <ul>
+        <li><a href="http://sheki.in/me">About Me</a></li>
+        <li><a href="/">All Problems</a></li>
+   </div>
+  </body>
+</html>
