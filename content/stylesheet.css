@@ -103,3 +103,10 @@ a:hover {
 
   line-height: 20px;
 }
+
+.kona_disqus ul {
+    list-style-type: none;
+}
+#disqus_thread ul {
+    list-style: none outside none;
+}
