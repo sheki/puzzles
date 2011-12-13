@@ -16,6 +16,15 @@
 compile '/stylesheet/' do
   # don't filter or layout
 end
+compile '/puzzle/*' do
+  if item.binary?
+    # don't filter binary items
+  else
+    filter :erb
+    filter :kramdown
+    layout 'puzzle'
+  end
+end
 
 compile '*' do
   if item.binary?
